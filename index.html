@@ -4,56 +4,59 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Instagram-Fake!</title>
+    <title>MRCSNAP</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/validar.js"></script>
     <script src="js/changerimg.js"></script>
 </head>
 
 <body>
-  <div class="logeado">
-   <div class="bienvenida">
-      <p>Bienvenido!</p>
-   </div>
-  </div>
+    <!-- En desarrollo!
+    <div class="logeado">
+        <div class="bienvenida">
+            <p>Bienvenido!</p>
+        </div>
+    </div>
+-->
 
 
 
+    <div class="register-login">
+        <div class="register">
+            <h1>MRCSNAP</h1>
+            <p>Regístrate para ver fotos y vídeos <br> de tus amigos!</p>
+            <button class="button-facebook" type="button"><i><img class="icon" src="src/icons/facebook-icon-circle.png" alt=""></i>Iniciar sesión con Facebook</button>
+            <p>---------------------- O -----------------------</p>
 
-   <div class="register-login">
-    <div class="register">
-        <h1>Instagram</h1>
-        <p>Regístrate para ver fotos y vídeos <br> de tus amigos!</p>
-        <button class="button-facebook" type="button"><i><img class="icon" src="src/icons/facebook-icon-circle.png" alt=""></i>Iniciar sesión con Facebook</button>
-        <p>----------------------  O  -----------------------</p>
+            <p>Registrese Aquí!</p>
+            <form action="" method="get" name="form-instagram">
+                <div class="form">
+                    <input type="text" id="numail" name="numail" placeholder="Numero celular o correo electronico" required />
+                    <input type="text" id="namereal" name="namereal" placeholder="Su nombre completo" pattern="[A-Za-záéíóúñ ]{1,900}" autocomplete="off" required />
+                    <input type="text" id="user" name="user" placeholder="Nombre de usuario" required />
+                    <input type="text" id="password" name="password" placeholder="Contraseña" autocomplete="off" required />
+                    <br>
+                    <input type="submit" value="Registrarse" />
+                </div>
+            </form>
+            <p class="condiciones" style="text-align: center">Al registrarse,usted estará aceptando nuestras <br> <a href="#">condiciones de uso</a>,nuestra <a href="#">política de privacidad</a> y <a href="#">la política de cookies</a></p>
+        </div>
 
-        <p>Registrese Aquí!</p>
-        <form action="" method="get" name="form-instagram">
-           <div class="form">
-            <input type="text" id="numail" name="numail" placeholder="Numero celular o correo electronico" required/>
-            <input type="text" id="namereal" name="namereal" placeholder="Su nombre completo" pattern="[A-Za-záéíóúñ ]{1,900}" autocomplete="off" required/>
-            <input type="text" id="user" name="user" placeholder="Nombre de usuario" required/>
-            <input type="text" id="password" name="password" placeholder="Contraseña" autocomplete="off" required/>
-            <br>
-            <input type="submit" value="Registrarse" />
-            </div>
-        </form>
-        <p class="condiciones" style="text-align: center">Al registrarse,usted estará aceptando nuestras <br> <a href="#">condiciones de uso</a>,nuestra <a href="#">política de privacidad</a> y <a href="#">la política de cookies</a></p>
+
+        <div class="login">
+            <p>¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
+        </div>
     </div>
 
-    <div class="login">
-        <p>¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
-    </div>
-    </div>
 
 
     <div class="galeria-imagenes">
-      <img id="change1"  alt="">
+        <img id="change1" alt="">
     </div>
 
-  <div class="galeria-imagenes-2">
-      <img id="change2"  alt="">
 
+    <div class="galeria-imagenes-2">
+        <img id="change2" alt="">
     </div>
 
 
