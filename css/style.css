@@ -21,19 +21,28 @@ p,a{
 }
 
 .register-login{
-    float: right;
-    margin-right: 20%;
+    position: absolute;
+    right: 0;
+    margin-right: 12%;
     margin-top: 20px;
+    z-index: 1;
 }
 
 .button-facebook {
     border: none;
-    color: white;
-    background-color: deepskyblue;
+    color: #efefef;
+    background-color: #3ea6f9;
+    text-shadow:0px 1px 2px #087DF6FF;
     border-radius: 3%;
-    font: 13px 'robotoslab';
+    font: 14px 'robotoslab';
     cursor: pointer;
     outline: none;
+    transition: all 0.5s;
+}
+
+.button-facebook:hover{
+    background-color:#57adf1;
+    transition: all 0.5s;
 }
 
 .register {
@@ -72,13 +81,21 @@ p,a{
 
 .form input[type="submit"]{
   font:14px 'robotoslab';
-  background-color: deepskyblue;
-  color: white;
+  background-color: #3ea6f9;
+  text-shadow:0px 1px 2px #087DF6FF;
+  color: #efefef;
   border:2px solid;
   border-bottom-right-radius: 10%;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.form input[type="submit"]:hover{
+  background-color:#57adf1;
+  transition: all 0.5s;
 }
 
 .login {
@@ -88,6 +105,7 @@ p,a{
     box-shadow: 0px 0px 2px black;
     width: 320px;
     padding: 10px 0px;
+    background-color:  whitesmoke;
 }
 
 .login p{
@@ -101,27 +119,33 @@ p,a{
 }
 
 .galeria-imagenes{
-position: fixed;
-display: inline-flex;
-
+position: absolute;
+margin-left:0%;
+z-index: 0;
 }
 
 .galeria-imagenes img{
-  width: 400px;
+width: 390px;
+height: 500px;
+
+
 }
 
+
+
+
+
 .galeria-imagenes-2{
-position: fixed;
-margin-top:300px;
-display: inline-flex;
+position: absolute;
+margin-left: 28.7%;
+margin-top:180px;
+z-index: 0;
 }
 
 .galeria-imagenes-2 img{
-  width: 400px;
+width: 370px;
+height: 505px;
 }
-
-
-
 
 
 

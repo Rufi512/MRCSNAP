@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Instagram-Fake!</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/validar.js"></script>
+    <script src="js/changerimg.js"></script>
 </head>
 
 <body>
@@ -19,10 +21,10 @@
         <p>Registrese Aqui!</p>
         <form action="" method="get" name="form-instagram">
            <div class="form">
-            <input type="text" name="numail" placeholder="Numero celular o correo electronico" />
-            <input type="text" name="name" placeholder="Su nombre completo" />
-            <input type="text" name="user" placeholder="Nombre de usuario" />
-            <input type="text" name="password" placeholder="Contraseña" />
+            <input type="text" id="numail" name="numail" placeholder="Numero celular o correo electronico" required/>
+            <input type="text" id="namereal" name="namereal" placeholder="Su nombre completo" autocomplete="off" required/>
+            <input type="text" id="user" name="user" placeholder="Nombre de usuario" required/>
+            <input type="text" id="password" name="password" placeholder="Contraseña" autocomplete="off" required/>
             <br>
             <input type="submit" value="Registrarse" />
             </div>
@@ -34,25 +36,17 @@
         <p>¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
     </div>
     </div>
-<!--
+
 
     <div class="galeria-imagenes">
-        <img src="src/2.jpg" alt="">
-        <img src="src/4.jpeg" alt="">
-        <img src="src/6.png" alt="">
-        <img src="src/8.jpg" alt="">
-        <img src="src/10.png" alt="">
+      <img id="change1"  alt="">
     </div>
 
   <div class="galeria-imagenes-2">
-        <img src="src/1.jpg" alt="">
-        <img src="src/3.jpeg" alt="">
-        <img src="src/5.jpg" alt="">
-        <img src="src/7.jpg" alt="">
-        <img src="src/9.jpg" alt="">
+      <img id="change2"  alt="">
 
     </div>
-    -->
+
 
 </body>
 
