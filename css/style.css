@@ -138,8 +138,6 @@ height: 570px;
 
 
 
-
-
 .galeria-imagenes-2{
 position: absolute;
 margin-left: 28.7%;
@@ -151,6 +149,34 @@ z-index: 0;
 width: 400px;
 height: 570px;
 }
+
+
+.galeria-imagenes,.galeria-imagenes-2{
+  animation-name: fade;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade{
+  0%{
+    opacity:0%;
+  }
+
+  25%{
+    opacity:100%;
+  }
+    80%{
+      opacity: 100%;
+    }
+   98%{
+    opacity:0%;
+  }
+   100%{
+    opacity:0%;
+  }
+}
+
+
 
 
 
