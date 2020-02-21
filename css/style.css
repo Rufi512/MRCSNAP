@@ -102,6 +102,7 @@ p,a{
 
 .galeria-imagenes{
 position: fixed;
+display: inline-flex;
 
 }
 
@@ -112,6 +113,7 @@ position: fixed;
 .galeria-imagenes-2{
 position: fixed;
 margin-top:300px;
+display: inline-flex;
 }
 
 .galeria-imagenes-2 img{
