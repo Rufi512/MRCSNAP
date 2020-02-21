@@ -1,0 +1,125 @@
+/*Llevo 18 minutos*/
+@import url(fonts.css);
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+p,a{
+    font: 13px 'robotoslab';
+    color: grey;
+    text-decoration: none;
+}
+
+
+.icon{
+  width: 15px;
+  float: left;
+  margin-top:1px;
+  margin-right:2px;
+}
+
+.register-login{
+    float: right;
+    margin-right: 20%;
+    margin-top: 20px;
+}
+
+.button-facebook {
+    border: none;
+    color: white;
+    background-color: deepskyblue;
+    border-radius: 3%;
+    font: 13px 'robotoslab';
+    cursor: pointer;
+    outline: none;
+}
+
+.register {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 2px black;
+    width: 300px;
+    height: 570px;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 10px;
+}
+
+.register h1 {
+    font: 50px 'billabong';
+}
+
+.form {
+    margin-top:-25px;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+}
+
+.form input[type="text"]{
+  margin-top:10px;
+  height: 25px;
+  border:none;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #231f1f;
+  outline: none;
+}
+
+.form input[type="submit"]{
+  font:14px 'robotoslab';
+  background-color: deepskyblue;
+  color: white;
+  border:2px solid;
+  border-bottom-right-radius: 10%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+.login {
+    margin-top: 3%;
+    text-align: center;
+    display: block;
+    box-shadow: 0px 0px 2px black;
+    width: 320px;
+    padding: 10px 0px;
+}
+
+.login p{
+  font-family: fira;
+  font-size: 14px;
+  color: black;
+}
+
+.condiciones{
+  font:14px 'light';
+}
+
+.galeria-imagenes{
+position: fixed;
+
+}
+
+.galeria-imagenes img{
+  width: 400px;
+}
+
+.galeria-imagenes-2{
+position: fixed;
+margin-top:300px;
+}
+
+.galeria-imagenes-2 img{
+  width: 400px;
+}
+
+
+
+
+
+
