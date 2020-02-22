@@ -16,7 +16,7 @@ validar();
 function validar(){
 
   if (numail.value=="") {
-    numail.setCustomValidity("Ajustate a escribir tu Email o Numero de Telefono!")
+    numail.setCustomValidity("Ajustate a escribir tu Email o Numero de Telefono!");
   }
 
   else{

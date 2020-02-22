@@ -9,16 +9,18 @@ imagenes2[0]="src/1.jpg";
 imagenes2[1]="src/3.jpg";
 imagenes2[2]="src/5.jpg";
 imagenes2[3]="src/7.jpg";
-var i=0;
-setInterval(cambiarimg,10000);
 
+
+var i=0;
+
+setInterval(cambiarimg,10000);
 function cambiarimg(){
   var changer=document.getElementById("change1");
   var changer2=document.getElementById("change2");
   changer.src=imagenes[i];
   changer2.src=imagenes2[i];
   i++;
-  if (i>2) {
+  if (i>3) {
     i=0;
   }
   else{}

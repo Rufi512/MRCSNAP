@@ -163,25 +163,21 @@ p,a {
     0% {
         opacity: 0%;
     }
-
-    25% {
+    15%{
+      opacity: 0%;
+    }
+    30% {
         opacity: 100%;
     }
 
-    80% {
+    88% {
         opacity: 100%;
-    }
-
-    90% {
-        opacity: 0%;
     }
 
     100% {
         opacity: 0%;
     }
 }
-
-
 
 /*En desarrollo
 
