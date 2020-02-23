@@ -3,3 +3,5 @@ dir_to_ignore/.git
 /.git
 .git
 .git/
+*.db
+*.db

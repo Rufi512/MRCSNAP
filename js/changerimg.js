@@ -1,7 +1,7 @@
 var imagenes= new Array();
 imagenes[0]="src/2.jpg";
 imagenes[1]="src/4.jpg";
-imagenes[2]="src/6.png";
+imagenes[2]="src/6.jpg";
 imagenes[3]="src/8.jpg";
 
 var imagenes2= new Array();
