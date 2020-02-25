@@ -1,17 +1,21 @@
-/*Llevo 18 minutos*/
 @import url(fonts.css);
+@import url(mrcsnap.css);
+@import url(login.css);
 
 body {
     margin: 0;
     background-color: whitesmoke;
 }
 
-p,a {
+p,a,label {
     font: 13px 'robotoslab';
     color: grey;
     text-decoration: none;
 }
 
+label{
+    cursor: pointer;
+}
 
 .icon {
     width: 15px;
@@ -61,7 +65,7 @@ p,a {
 }
 
 
-.form {
+.form-reg {
     margin-top: -25px;
     padding: 0;
     display: flex;
@@ -70,7 +74,7 @@ p,a {
 
 }
 
-.form input[type="text"] {
+.form-reg input[type="text"] {
     margin-top: 10px;
     height: 25px;
     border: none;
@@ -78,14 +82,15 @@ p,a {
     border-bottom-width: 2px;
     border-bottom-color: #231f1f;
     outline: none;
+    transition: all 0.5s;
 }
 
-.form input[type="text"]:focus {
+.form-reg input[type="text"]:focus {
     border-bottom-color: #03a9f4;
     transition: all 0.5s;
 }
 
-.form input[type="submit"] {
+.boton-registrar{
     font: 14px 'robotoslab';
     background-color: #3ea6f9;
     text-shadow: 0px 1px 2px #087DF6FF;
@@ -99,12 +104,12 @@ p,a {
     transition: all 0.5s;
 }
 
-.form input[type="submit"]:hover {
+.boton-registrar:hover {
     background-color: #57adf1;
     transition: all 0.5s;
 }
 
-.login {
+.login-question {
     margin-top: 3%;
     text-align: center;
     display: block;
@@ -114,7 +119,7 @@ p,a {
     background-color: whitesmoke;
 }
 
-.login p {
+.login-question p {
     font-family: fira;
     font-size: 14px;
     color: black;
@@ -179,32 +184,4 @@ p,a {
     }
 }
 
-/*En desarrollo
 
-.logeado {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    position: fixed;
-    z-index: 2;
-    opacity: 80%;
-    visibility: collapse;
-}
-
-.bienvenida {
-    text-align: center;
-}
-
-.bienvenida p {
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 230px;
-}
-*/

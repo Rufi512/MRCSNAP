@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
     <title>MRCSNAP</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/validar.js"></script>
@@ -11,13 +12,7 @@
 </head>
 
 <body>
-    <!-- En desarrollo!
-    <div class="logeado">
-        <div class="bienvenida">
-            <p>Bienvenido!</p>
-        </div>
-    </div>
--->
+
 
 
 
@@ -29,22 +24,23 @@
             <p>---------------------- O -----------------------</p>
 
             <p>Registrese Aquí!</p>
-            <form action="" method="get" name="form-instagram">
-                <div class="form">
-                    <input type="text" id="numail" name="numail" placeholder="Numero celular o correo electronico" required />
-                    <input type="text" id="namereal" name="namereal" placeholder="Su nombre completo" pattern="[A-Za-záéíóúñ ]{1,900}" autocomplete="off" required />
-                    <input type="text" id="user" name="user" placeholder="Nombre de usuario" required />
-                    <input type="text" id="password" name="password" placeholder="Contraseña" autocomplete="off" required />
+            <form action="" method="post" name="form-mrcsnap">
+                <div class="form-reg">
+                    <input type="text" id="numail" name="numail" placeholder="Numero celular o correo electronico" title="Numero de Telefono o Correo Electronico"required />
+                    <input type="text" id="namereal" name="namereal" placeholder="Su nombre completo" pattern="[A-Za-záéíóúñ ]{1,900}" title="Coloca tu Nombre"autocomplete="off" required />
+                    <input type="text" id="user" name="user" placeholder="Nombre de usuario" autocomplete="off" title="Coloca un nombre para tu usuario" required />
+                    <input type="text" id="password" name="password" placeholder="Contraseña" title="Coloca una contraseña para ingresar" autocomplete="off" required />
                     <br>
-                    <input type="submit" value="Registrarse" />
+                    <input class="boton-registrar" type="submit" value="Registrarse" />
                 </div>
             </form>
             <p class="condiciones" style="text-align: center">Al registrarse,usted estará aceptando nuestras <br> <a href="#">condiciones de uso</a>,nuestra <a href="#">política de privacidad</a> y <a href="#">la política de cookies</a></p>
         </div>
 
 
-        <div class="login">
-            <p>¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
+        <div class="login-question">
+
+            <p>¿Tienes una cuenta? <label for="screening">Inicia Sesión</label></p>
         </div>
     </div>
 
@@ -59,6 +55,24 @@
         <img id="change2" alt="">
     </div>
 
+<!-- Zona de Inicio de Sesión-->
+<input style="display: none;" type="checkbox" id="screening">
+<div class="login">
+    <label class="xclose"for="screening">X</label>
+    <div class="screen">
+        <p>Iniciar Sesión</p>
+    <form action="" method="post" name="login-mrcsnap">
+        <div class="form-login">
+            <input type="text" name="userdb" placeholder="Introduce tu Usuario" autocomplete="off">
+
+             <input type="text" class="password-login" name="passworddb" placeholder="Introduce tu Contraseña" title="introduce la contraseña de usuario" autocomplete="off" />
+
+             <input class="boton-ingresar" type="submit" value="Ingresar">
+        </div>
+
+    </form>
+    </div>
+</div>
 
 </body>
 

@@ -1,0 +1,71 @@
+.logeado {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    position: fixed;
+    z-index: 2;
+    opacity: 95%;
+    animation-name:fadewelcome;
+    animation-duration: 8s;
+     visibility: collapse;
+}
+
+.bienvenida {
+    text-align: center;
+}
+
+.bienvenida p {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 230px;
+}
+
+ @keyframes fadewelcome{
+
+        0%{
+            opacity: 0%;
+        }
+
+        30%{
+            opacity:100%;
+        }
+
+        70%{
+            opacity: 100%;
+        }
+
+        100%{
+            opacity:0%;
+            visibility: collapse;
+        }
+
+
+
+ }
+
+.bar-nav{
+    display: block;
+    text-align: center;
+}
+
+.bar-nav ul{
+    display: block;
+}
+
+.bar-nav li{
+    display: inline-flex;
+    overflow: hidden;
+    padding: 0px 20px;
+    background-color:cornsilk;
+}
+
+.bar-nav li a{
+    color: black;
+}
