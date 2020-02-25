@@ -46,11 +46,11 @@ setInterval(imgsdevices,10000);
 function imgsdevices(){
 var deviceback=document.getElementById("deviceback");
 deviceback.style.backgroundImage="url("+imagenesdev[i]+")";
- i++;
+
   if (i>5) {
     i=0;
   }
   else{}
 }
-
+ i++;
 window.addEventListener("load",imgsdevices,false);
