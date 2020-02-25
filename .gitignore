@@ -5,3 +5,4 @@ dir_to_ignore/.git
 .git/
 *.db
 *.db
+src/Thumbs.db
