@@ -23,9 +23,14 @@ imagenesdev[5]="src/mobile/6d.jpg";
 
 
 var i=0;
+var ancho = window.innerWidth;
 
-setInterval(cambiarimg,10000);
-function cambiarimg(){
+const pc=()=>{
+   i=Math.round(Math.random()*3);
+  setTimeout(cambiarimg,0);
+  setInterval(cambiarimg,10000);
+};
+ cambiarimg=()=>{
   if (i>3) {
     i=0;
   }
@@ -37,20 +42,32 @@ function cambiarimg(){
   i++;
 
 
-}
+};
 
+const device=()=>{
+   i=Math.round(Math.random()*5);
+  setTimeout(imgsdevices,0);
+  setInterval(imgsdevices,10000);
+};
 
-window.addEventListener("load",cambiarimg,false);
-
-setInterval(imgsdevices,10000);
-function imgsdevices(){
+const imgsdevices=()=>{
 var deviceback=document.getElementById("deviceback");
 deviceback.style.backgroundImage="url("+imagenesdev[i]+")";
 
-  if (i>5) {
+  if (i>=5) {
     i=0;
+
   }
-  else{}
+  else{
+    i++;
+  }
+
+};
+
+
+if(ancho>790){
+pc();
 }
- i++;
-window.addEventListener("load",imgsdevices,false);
+else{
+  device();
+}
