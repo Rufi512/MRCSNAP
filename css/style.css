@@ -14,7 +14,7 @@ p,a,label {
     text-decoration: none;
 }
 
-label{
+label {
     cursor: pointer;
 }
 
@@ -91,7 +91,7 @@ label{
     transition: all 0.5s;
 }
 
-.boton-registrar{
+.boton-registrar {
     font: 14px 'robotoslab';
     background-color: #3ea6f9;
     text-shadow: 0px 1px 2px #087DF6FF;
@@ -169,9 +169,11 @@ label{
     0% {
         opacity: 0%;
     }
-    15%{
-      opacity: 0%;
+
+    15% {
+        opacity: 0%;
     }
+
     30% {
         opacity: 100%;
     }
@@ -184,35 +186,38 @@ label{
         opacity: 0%;
     }
 }
-.device-background{
+
+.device-background {
     visibility: collapse;
     transition: all 0.5s;
 }
+
 /*Punto de quiebre*/
-@media only screen and (max-device-width:790px){
-    .register-login{
-     position: absolute;
-     width: 320px;
-     left: 50%;
-     top: 50%;
-     -moz-transform: translate(-50%, -50%);
-     -o-transform: translate(-50%, -50%);
-     -ms-transform: translate(-50%, -50%);
-     -webkit-transform: translate(-50%, -50%);
-     transform: translate(-50%, -50%);
-     opacity: 90%;
+@media only screen and (max-device-width:790px) {
+    .register-login {
+        position: absolute;
+        width: 320px;
+        left: 50%;
+        top: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 90%;
     }
 
 
 
 
 
-    .galeria-imagenes,.galeria-imagenes-2{
+    .galeria-imagenes,
+    .galeria-imagenes-2 {
         visibility: collapse;
     }
 
-    .devices-background{
-        margin:auto;
+    .devices-background {
+        margin: auto;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -225,26 +230,26 @@ label{
     }
 
     @keyframes changeimgdev {
-    0% {
-        opacity: 0%;
-    }
-    15%{
-      opacity: 0%;
-    }
-    30% {
-        opacity: 100%;
+        0% {
+            opacity: 0%;
+        }
+
+        15% {
+            opacity: 0%;
+        }
+
+        30% {
+            opacity: 100%;
+        }
+
+        88% {
+            opacity: 100%;
+        }
+
+        100% {
+            opacity: 0%;
+        }
     }
 
-    88% {
-        opacity: 100%;
-    }
 
-    100% {
-        opacity: 0%;
-    }
 }
-
-
-}
-
-
