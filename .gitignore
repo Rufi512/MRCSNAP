@@ -7,3 +7,6 @@ dir_to_ignore/.git
 *.db
 src/Thumbs.db
 *.db
+src/Thumbs.db
+*.db
+src/icons/Thumbs.db

@@ -22,24 +22,24 @@ imagenesdev[5] = "src/mobile/6d.jpg";
 
 
 
-var i = 0; 
+var i = 0;
 var ancho = window.innerWidth; //Se almacena el ancho de la pantalla
 
 const pc = () => {
-    i = Math.round(Math.random() * 3);
+    i = Math.round(Math.random() * 3); //Al iniciar las imágenes pueden ser mostrada comenzado desde x posición ordenada
     setTimeout(cambiarimg, 0);
     setInterval(cambiarimg, 10000);
 };
 cambiarimg = () => {
-    if (i > 3) {
+    if (i > 3) { //Si el contador i es mayor que 3 (Si el contador es mayor que el array) reiniciara en 0
         i = 0;
-    } else {}
+    } else {
     var changer = document.getElementById("change1");
     var changer2 = document.getElementById("change2");
     changer.src = imagenes[i];
     changer2.src = imagenes2[i];
     i++;
-
+}
 
 };
 
@@ -63,7 +63,7 @@ const imgsdevices = () => {
 };
 
 
-if (ancho > 790) { //Dependiendo del ancho de las pantallas se ejecutara x funcion
+if (ancho > 790) { //Dependiendo del ancho de las pantallas se ejecutara x función
     pc();
 } else {
     device();
