@@ -33,13 +33,13 @@ const pc = () => {
 cambiarimg = () => {
     if (i > 3) { //Si el contador i es mayor que 3 (Si el contador es mayor que el array) reiniciara en 0
         i = 0;
-    } else {
+    } else {}
     var changer = document.getElementById("change1");
     var changer2 = document.getElementById("change2");
     changer.src = imagenes[i];
     changer2.src = imagenes2[i];
     i++;
-}
+
 
 };
 
