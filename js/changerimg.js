@@ -68,3 +68,14 @@ if (ancho > 790) { //Dependiendo del ancho de las pantallas se ejecutara x funci
 } else {
     device();
 }
+
+const ready = () =>{
+    var gallery1=document.getElementById("gallery1");
+    var gallery2=document.getElementById("gallery2");
+    var deviceback=document.getElementById("deviceback");
+    gallery1.style.animation = 'fade 10s infinite';
+    gallery2.style.animation = 'fade 10s infinite';
+    deviceback.style.animation = 'fade 10s infinite';
+}
+
+window.addEventListener("load", ready, false);
