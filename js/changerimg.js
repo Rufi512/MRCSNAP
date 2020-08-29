@@ -1,81 +1,87 @@
-var imagenes = new Array();
-imagenes[0] = "src/2.jpg";
-imagenes[1] = "src/4.jpg";
-imagenes[2] = "src/6.jpg";
-imagenes[3] = "src/8.jpg";
+const imagenes = ["src/1.jpg", "src/2.jpg", "src/3.jpg", "src/4.jpg", "src/5.jpg", "src/6.jpg", "src/7.jpg", "src/8.jpg"]
+const imgPC = document.querySelector('#gallery1')
+const imgPC2 = document.querySelector('#gallery2')
+const galeria = imgPC.querySelectorAll('.change1')
+const galeria2 = imgPC2.querySelectorAll('.change2')
+const deviceback = document.getElementById("deviceback");
+var ancho = window.innerWidth
+var auxiliar = 0
+let NumArray = []
 
 
+//Genera numeros del 0 al 7 desordenados sin repetir
+while (NumArray.length < imagenes.length) {
+    const num = Math.floor(Math.random() * imagenes.length);
+    if (NumArray.indexOf(num) == -1) {
+        NumArray.push(num);
+    }
+}
 
-var imagenes2 = new Array();
-imagenes2[0] = "src/1.jpg";
-imagenes2[1] = "src/3.jpg";
-imagenes2[2] = "src/5.jpg";
-imagenes2[3] = "src/7.jpg";
-
-var imagenesdev = new Array();
-imagenesdev[0] = "src/mobile/1d.jpg";
-imagenesdev[1] = "src/mobile/2d.jpg";
-imagenesdev[2] = "src/mobile/3d.jpg";
-imagenesdev[3] = "src/mobile/4d.jpg";
-imagenesdev[4] = "src/mobile/5d.jpg";
-imagenesdev[5] = "src/mobile/6d.jpg";
+if (ancho > 790) {
 
 
+    //Empieza a asignar esos numeros desordenados
 
-var i = 0;
-var ancho = window.innerWidth; //Se almacena el ancho de la pantalla
+    for (var i = 0; i < galeria.length; i++) {
 
-const pc = () => {
-    i = Math.round(Math.random() * 3); //Al iniciar las imágenes pueden ser mostrada comenzado desde x posición ordenada
-    setTimeout(cambiarimg, 0);
-    setInterval(cambiarimg, 10000);
-};
-cambiarimg = () => {
-    if (i > 3) { //Si el contador i es mayor que 3 (Si el contador es mayor que el array) reiniciara en 0
-        i = 0;
-    } else {}
-    var changer = document.getElementById("change1");
-    var changer2 = document.getElementById("change2");
-    changer.src = imagenes[i];
-    changer2.src = imagenes2[i];
-    i++;
+        galeria[i].src = imagenes[NumArray[i]];
 
+        galeria2[i].src = imagenes[NumArray[i + 4]]
 
-};
-
-const device = () => {
-    i = Math.round(Math.random() * 5);
-    setTimeout(imgsdevices, 0);
-    setInterval(imgsdevices, 10000);
-};
-
-const imgsdevices = () => {
-    var deviceback = document.getElementById("deviceback");
-    deviceback.style.backgroundImage = "url(" + imagenesdev[i] + ")";
-
-    if (i >= 5) {
-        i = 0;
-
-    } else {
-        i++;
     }
 
-};
+    window.addEventListener("load", () => {
 
 
-if (ancho > 790) { //Dependiendo del ancho de las pantallas se ejecutara x función
-    pc();
+        for (var i = 0; i <= 3; i++) {
+            galeria[i].style.animation = 'fade 10s infinite'
+            galeria2[i].style.animation = 'fade 10s infinite'
+        }
+        
+        //Ejecuta la funcion fade para el pase de imagenes
+
+        setTimeout(fadeImg, 0)
+
+        function fadeImg() {
+            galeria[(auxiliar - 1 + galeria.length) % galeria.length].style.visibility = 'collapse';
+            galeria[auxiliar].style.visibility = 'visible'
+            galeria2[(auxiliar - 1 + galeria2.length) % galeria2.length].style.visibility = 'collapse';
+            galeria2[auxiliar].style.visibility = 'visible'
+            galeria[auxiliar].style.zIndex = '10000'
+            galeria2[auxiliar].style.zIndex = '10000'
+
+            if (auxiliar >= 3) {
+                auxiliar = 0
+                for (var i = 0; i <= 3; i++) {
+                    galeria[i].style.zIndex = '0'
+                    galeria2[i].style.zIndex = '0'
+                }
+
+            } else {
+                auxiliar++;
+            }
+        }
+
+        setInterval(fadeImg, 10000);
+    })
+
+
 } else {
-    device();
-}
+    //Carga la parte de las imagenes para dispositivo movil
+    window.addEventListener("load", () => {
+        setTimeout(imgsdevices, 0);
+        setInterval(imgsdevices, 10000);
+        deviceback.style.animation = 'fade 10s infinite';
 
-const ready = () =>{
-    var gallery1=document.getElementById("gallery1");
-    var gallery2=document.getElementById("gallery2");
-    var deviceback=document.getElementById("deviceback");
-    gallery1.style.animation = 'fade 10s infinite';
-    gallery2.style.animation = 'fade 10s infinite';
-    deviceback.style.animation = 'fade 10s infinite';
-}
+        function imgsdevices() {
+            if (auxiliar >= imagenes.length - 1) {
+                auxiliar = 0;
 
-window.addEventListener("load", ready, false);
+            } else {
+                auxiliar++;
+            }
+
+            deviceback.style.backgroundImage = "url(" + imagenes[NumArray[auxiliar]] + ")";
+        }
+    })
+}
